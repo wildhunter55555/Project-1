@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Allocation Portal - Admin</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        input, select, button { padding: 10px; margin: 5px 0; width: 100%; box-sizing: border-box; }
+        button { background-color: #0056b3; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #004494; }
+    </style>
+</head>
+<body>
+
+<form action="/logout" method="POST" style="text-align: right;">
+    <button type="submit" style="width: auto; background-color: #dc3545;">Log Out</button>
+</form>
+
+<h1>Admin Dashboard</h1>
+
+<div class="container">
+    <h2>Assign a New Task</h2>
+    <form id="assignTaskForm">
+        <input type="text" id="title" placeholder="Task Title (e.g., Fix Lab 2 Projector)" required>
+        <input type="text" id="description" placeholder="Task Description" required>
+        <input type="text" id="location" placeholder="Location (e.g., Block A)" required>
+        <input type="date" id="deadline" required>
+
+        <select id="staffSelect" required>
+            <option value="">-- Select Available Staff --</option>
+        </select>
+
+        <input type="text" id="adminNotes" placeholder="Admin Notes (Optional)">
+
+        <button type="submit">Assign Task</button>
+    </form>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

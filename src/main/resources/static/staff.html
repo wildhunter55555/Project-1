@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Allocation Portal - Staff</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        select, button { padding: 8px; }
+        button { background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 4px; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+<form action="/logout" method="POST" style="text-align: right;">
+    <button type="submit" style="width: auto; background-color: #dc3545;">Log Out</button>
+</form>
+
+<h1>Staff Dashboard</h1>
+
+<div class="container" style="margin-bottom: 20px;">
+    <h2>Attendance Status</h2>
+    <p>Current Status: <span id="availabilityStatus" style="font-weight: bold; font-size: 1.2em; color: gray;">Checking...</span></p>
+
+    <div style="margin-top: 15px;">
+        <button id="clockInBtn" onclick="clockIn()" style="background-color: #28a745; margin-right: 10px; width: auto; padding: 10px 20px;">Clock In</button>
+        <button id="clockOutBtn" onclick="clockOut()" style="background-color: #dc3545; width: auto; padding: 10px 20px;">Clock Out</button>
+    </div>
+</div>
+
+<div class="container">
+    <h2>My Assigned Tasks</h2>
+
+<script src="staff.js"></script>
+</body>
+</html>
